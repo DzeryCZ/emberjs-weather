@@ -1,0 +1,33 @@
+    <div class="container">
+      <div class="city">
+        {{input value=city class="input-city" type="text" placeholder="City"}}
+        <button class="btn" {{action "showMeWather"}}>
+            OK
+        </button>
+      </div>
+
+      <div class="forecast">
+        {{#each weather as |day|}}
+          <div class="day">
+              <div class="date">
+                  {{date day.dt}}
+              </div>
+              <div class="weather-icon">
+                  <i class="wi {{weather-icon day.weather.0.main}}"></i>
+              </div>
+              <div class="temperature">
+                  {{temperature day.temp.day}}
+              </div> 
+              <div class="main-info">
+                  {{day.weather.0.main}}
+              </div> 
+              <div class="humidity">
+                  <i class="wi wi-humidity"></i> {{day.humidity}}%
+              </div> 
+              
+          </div>
+        {{/each}}
+      
+      </div>
+
+    </div><!-- /.container -->
