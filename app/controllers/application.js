@@ -2,11 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     actions: {
+        shownCity: "",
         // If user click "OK" button
-        showMeWather: function () {
-
-            // get value of city input from template
-            var city = this.get('city');
+        showMeWather: function (city) {
 
             // Start getting data from API
             this.getData(city);
@@ -16,11 +14,11 @@ export default Ember.Controller.extend({
         var _that = this;
 
         //ask openweathermap.org server for data
-        var raw_data = Ember.$.getJSON("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=json&units=metric&cnt=16&appid=08386da1df4f62f3426794b77cce7146",
+        Ember.$.getJSON("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=json&units=metric&cnt=16&appid=08386da1df4f62f3426794b77cce7146",
             function (data) { //callback with data
 
                 //if code of response is 200 - OK
-                if (data.cod == 200) {
+                if (data.cod === "200") {
 
                     // Nicename of found city
                     var currentCity = data.city.name;
@@ -37,7 +35,7 @@ export default Ember.Controller.extend({
                         today: today,
                         forecast: forecast
                     });
-
+                    _that.shownCity = city;
                 }
             });
     }
