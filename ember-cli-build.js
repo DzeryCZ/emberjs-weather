@@ -9,7 +9,7 @@ module.exports = function(defaults) {
 
   //app.import('bower_components/bootstrap/dist/css/bootstrap.css');
   app.import('bower_components/normalize-css/normalize.css');
-  app.import('bower_components/weather-icons/css/weather-icons.css');
+  app.import('vendor/weather-icons.css');
   app.import('bower_components/roboto-fontface/css/roboto/roboto-fontface.css');
   
   return app.toTree();

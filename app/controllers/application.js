@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     actions: {
-        shownCity: "",
         // If user click "OK" button
         showMeWather: function (city) {
 
@@ -35,7 +34,6 @@ export default Ember.Controller.extend({
                         today: today,
                         forecast: forecast
                     });
-                    _that.shownCity = city;
                 }
             });
     }

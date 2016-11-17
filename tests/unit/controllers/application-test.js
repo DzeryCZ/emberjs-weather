@@ -5,13 +5,7 @@ moduleFor('controller:application', 'Unit | Controller | application', {
   // needs: ['controller:foo']
 });
 
-test('it exists', function(assert) {
+test('it exists', function (assert) {
   let controller = this.subject();
   assert.ok(controller);
 });
-
-// test('set city', function(assert) {
-//   const ctrl = this.subject();
-//   ctrl.send('showMeWather', 'Prague')
-//   assert.equal(ctrl.get('shownCity'), 'Prague', 'City is OK');
-// });
