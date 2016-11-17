@@ -7,10 +7,9 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  //app.import('bower_components/bootstrap/dist/css/bootstrap.css');
   app.import('bower_components/normalize-css/normalize.css');
   app.import('vendor/weather-icons.css');
   app.import('bower_components/roboto-fontface/css/roboto/roboto-fontface.css');
-  
+
   return app.toTree();
 };

@@ -7,7 +7,7 @@
         </button>
 	</div>
 
-    {{#if today}}
+	{{#if today}}
 	<div class="today-forecast">
 		<div class="current-city">
 			{{currentCity}}
@@ -23,18 +23,18 @@
 		<div class="main-info">
 			{{today.weather.0.main}}
 		</div>
-        <div class="additional-row">
+		<div class="additional-row">
 			<div class="rain">
 				<i class="wi wi-umbrella"></i> {{today.rain}}%
 			</div>
 			<div class="speed">
 				<i class="wi wi-strong-wind"></i> {{today.speed}} km/h
 			</div>
-            <div class="cloudy">
+			<div class="cloudy">
 				<i class="wi wi-cloud"></i> {{today.clouds}} %
 			</div>
-        </div>
-        <div class="additional-row">
+		</div>
+		<div class="additional-row">
 			<div class="humidity">
 				<i class="wi wi-humidity"></i> {{today.humidity}} %
 			</div>
@@ -43,8 +43,8 @@
 			</div>
 		</div>
 	</div>
-    <!-- /.today -->
-    {{/if}}
+	<!-- /.today -->
+	{{/if}}
 
 	<div class="forecast">
 		{{#each forecast as |day|}}
@@ -67,7 +67,7 @@
 		</div>
 		{{/each}}
 	</div>
-    <!-- /.forecast -->
+	<!-- /.forecast -->
 
 </div>
 <!-- /.container -->

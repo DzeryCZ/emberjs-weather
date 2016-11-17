@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
         var _that = this;
 
         //ask openweathermap.org server for data
-        Ember.$.getJSON("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=json&units=metric&cnt=16&appid=08386da1df4f62f3426794b77cce7146",
+        Ember.$.getJSON("//api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=json&units=metric&cnt=16&appid=08386da1df4f62f3426794b77cce7146",
             function (data) { //callback with data
 
                 //if code of response is 200 - OK
@@ -33,8 +33,7 @@ export default Ember.Controller.extend({
                         currentCity: currentCity,
                         today: today,
                         forecast: forecast
-                    });
-                }
+                    });                }
             });
     }
 });
